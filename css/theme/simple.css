@@ -12,14 +12,20 @@
  *********************************************/
 body {
   background: white;
-  background-color: white; }
+  background-color: white;
+  }
 
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: black; }
+  color: black; 
+  background-image:url('../../media/ci_user_2013_logo_medium.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  }
 
 ::selection {
   color: white;
