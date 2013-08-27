@@ -7,6 +7,8 @@
 body {
 	@include bodyBackground();
 	background-color: $backgroundColor;
+  background-image: url('media/ci_user_2013_logo_medium.png');
+  background-position: left bottom;
 }
 
 .reveal {
