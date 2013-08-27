@@ -61,6 +61,7 @@
 				<section>
 					<h2>Designing the plugin: The long and winding road</h2>
 			</section>
+			<section>
 				<section>
 					<h2>Phase 1: Learning Mercurial and Jenkins</h2>
 					<ul>
@@ -68,7 +69,12 @@
 						<li>Jenkins module and Java refreshing</li>
 						<li>Getting to know the Mercurial way of doing things</li>
 					</ul>
-					</section>
+				</section>
+				<section>
+					<h3>&lt;Insert picture of the build phases here&gt;</h3>
+				</section>
+			</section>
+			<section>
 				<section>
 					<h2>Phase 2: The first prototype</h2>
 					<ul>
@@ -78,23 +84,39 @@
 					</ul>
 				</section>
 				<section>
+					<h3>&lt;Insert picture of "follow the commit"/roundtrip&gt;</h3>
+				</section>
+				<section>
+					<h3>&lt;Insert picture of cloning approach design&gt;</h3>
+				</section>
+			</section>
+			<section>
+				<section>
 					<h2>Phase 3: Working out the specifics</h2>
 					<ul>
 						<li>Sprint 5</li>
 						<li>Narrowing down scope</li>
-						<li>Releasing the hounds</li>
-						<li>Defining pretested integration</li>
-						<li>Implementing branch based integration</li>
-						<li>Discovering problems with the Mercurial Plugin</li>
+						<li>First public release</li>
+						<li>Coining "pretested integration"</li>
+						<li>Moving from cloning to branching approach</li>
+						<li>Limited by Mercurial Plugin dependency</li>
 					</ul>
 				</section>
+				<section>
+					<h3>&lt;Insert picture describing pretested integration vs
+					pretest commit&gt;</h3>
+				</section>
+				<section>
+					<h3>&lt;Insert definition of the two branchy
+					approaches&gt;</h3>
+				</section>
+			</section>
 				<section>
 					<h2>Phase 4: Refactoring and redesigning</h2>
 					<ul>
 						<li>After the course</li>
-						<li>Refactoring the plugin
-						<li>Proper use of extension points</li>
-						<li>Workflow discussion</li>
+						<li>Refactoring the plugin</li>
+						<li>Proper plugin extension</li>
 						<li>Release of stable version</li>
 					</ul>
 				</section>
@@ -105,15 +127,47 @@
 				<section>
 					<h2>DEMO</h2>
 				</section>
+			<section>
 				<section>
 					<h2>Plugin design</h2>
 				</section>
 				<section>
-					<h2>Workflow</h2>
+					<h3>&lt;Insert UML chart of the plugin&gt;</h3>
+				</section>
+				<section>
+					<h3>&lt;Insert drawing of build phase&gt;</h3>
+				</section>
+				<section>
+					<h2>Pretested Integration API</h2>
 					<ul>
-						<li></li>
+						<li>nextCommit</li>
+						<li>prepareWorkspace</li>
+						<li>handlePostBuild
+							<ul>
+								<li>commit</li>
+								<li>rollback</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Workflow: Mercurial</h2>
+					<ul>
+						<li>Invariant: All commits on the integration branch is
+						verified</li>
+					</ul>
+				</section>
+				<section>
+					<h3>&lt;Insert picture of integration branch and development
+					branches&gt;</h3>
+				</section>
+				<section>
+					<h3>&lt;Insert picture of stuff being pulled and
+					pushed&gt;</h3>
+				</section>
+			</section>
 				<section>
 					<h2>Implementing interfaces</h2>
 					<ul>
@@ -124,22 +178,43 @@
 					<h2>The future</h2>
 				</section>
 				<section>
-					<h2>Extending core functionality</h2>
+					<h2>Todo</h2>
 					<ul>
 						<li>Environment variables</li>
-            <li>Configurable reset</li>
-						<li>Customisation of commit credentials</li>
-						<li>Simplifying interfaces</li>
+						<li>Configurable reset</li>
+						<li>Simplifying interface implementation</li>
 						<li>Conditional integration</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Pretested Integration plugin vs. Mercurial plugin</h2>
-					<ul>
-						<li>Improving "the branchy approach"</li>
-						<li>Using revsets</li>
-						<li>Pull everything</li>
-					</ul>
+					<section>
+						<h2>Better "branchy approach"</h2>
+						<ul>
+							<li>Change mercurial plugin to:
+								<ul>
+									<li>Make it possible to pull specific
+									branches/revsets</li>
+									<li>Pull all branches</li>
+								</ul>
+							</li>
+							<li>Less configuration/cluttering of management</li>
+							<li>Deterministic playback</li>
+						</ul>
+					</section>
+					<section>
+						<h3>&lt;Insert picture of Mercurial frontend with proposed
+						changes&gt;</h3>
+					</section>
+					<section>
+						<h3>&lt;Insert picture of cluttered up jenkins&gt;</h3>
+					</section>
+					<section>
+						<h3>&lt;Insert picture of branches that are not sequentiably
+						mergeable&gt;</h3>
+					</section>
+				</section>
+				<section>
+					<h2>Questions....</h2>
 				</section>
 			</div>
 		</div>
