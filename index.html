@@ -71,7 +71,8 @@
 					</ul>
 				</section>
 				<section>
-					<h3>&lt;Insert picture of the build phases here&gt;</h3>
+          <h3>Buildphases</h3>
+          <img src="media/buildphases.png" />
 				</section>
 			</section>
 			<section>
@@ -87,8 +88,8 @@
 					<h3>&lt;Insert picture of "follow the commit"/roundtrip&gt;</h3>
 				</section>
 				<section>
-					<h3>&lt;Insert picture of cloning approach design&gt;</h3>
-				</section>
+				  <img src="media/cloning.png" />
+        </section>
 			</section>
 			<section>
 				<section>
@@ -103,13 +104,17 @@
 					</ul>
 				</section>
 				<section>
-					<h3>&lt;Insert picture describing pretested integration vs
-					pretest commit&gt;</h3>
-				</section>
+          <h3>Why pretested integration</h3>
+				  <img src="media/pi_vs_pc.png" />
+        </section>
 				<section>
-					<h3>&lt;Insert definition of the two branchy
-					approaches&gt;</h3>
-				</section>
+          <h3>Branching approach: Personal branch</h3>
+          <img src="media/workflow_personal.png" />
+        </section>
+        <section>
+          <h3>Branching approach: Fire and forget</h3>
+          <img src="media/workflow_fireforget.png" />
+        </section>
 			</section>
 				<section>
 					<h2>Phase 4: Refactoring and redesigning</h2>
@@ -130,15 +135,22 @@
 			<section>
 				<section>
 					<h2>Plugin design</h2>
+          <ul>
+            <li>Defines extension points for extendability</li>
+            <li>Mercurial support</li>
+            <li>Invariant: All commits on the integration branch is
+						verified</li>
+          </ul>
 				</section>
 				<section>
-					<h3>&lt;Insert UML chart of the plugin&gt;</h3>
+          <h3>Pretested integration classes</h3>
+          <img src="media/design.png" />
 				</section>
 				<section>
-					<h3>&lt;Insert drawing of build phase&gt;</h3>
+          <img src="media/pip_flowchart.png" />
 				</section>
 				<section>
-					<h2>Pretested Integration API</h2>
+					<h3>The extension point API</h3>
 					<ul>
 						<li>nextCommit</li>
 						<li>prepareWorkspace</li>
@@ -153,16 +165,15 @@
 			</section>
 			<section>
 				<section>
-					<h2>Workflow: Mercurial</h2>
+					<h2>Mercurial</h2>
 					<ul>
-						<li>Invariant: All commits on the integration branch is
-						verified</li>
+            <li>Branchy apprach: Personal branch</li>
+            <li>Atomic jobs</li>
 					</ul>
 				</section>
 				<section>
-					<h3>&lt;Insert picture of integration branch and development
-					branches&gt;</h3>
-				</section>
+				  <img src="media/branchy.png" />
+        </section>
 				<section>
 					<h3>&lt;Insert picture of stuff being pulled and
 					pushed&gt;</h3>
@@ -256,8 +267,7 @@
 						<h3>&lt;Insert picture of cluttered up jenkins&gt;</h3>
 					</section>
 					<section>
-						<h3>&lt;Insert picture of branches that are not sequentiably
-						mergeable&gt;</h3>
+            <img src="media/branchy.png" />
 					</section>
 				</section>
 				<section>
