@@ -39,16 +39,6 @@
 				<h2>Pretested Integration Plugin for Jenkins</h2>
 				Ronni Elken Lindsgard &amp; Alexander Winther Uldall
 				</section>
-				<section>
-				<h2>Introduction</h2>
-				<ul>
-					<li>Us...</li>
-					<li>Project Course: Development Studio</li>
-					<li>Praqma</li>
-					<li>Continous Delivery</li>
-					<li>Pretested Integration</li>
-				</ul>
-				</section>
         <section>
           <h2>Table of Contents</h2>
           <ol>
@@ -58,7 +48,34 @@
             <li>Future work</li>
           </ol>
         </section>
-				<section>
+					<section>
+          <section>
+				<h2>Introduction</h2>
+				<ul>
+					<li>Us...</li>
+					<li>Project Course: Development Studio</li>
+					<li>Praqma</li>
+					<li>Continous Delivery</li>
+					<li>Pretested Integration</li>
+				</ul>
+          </section>
+  				<section>
+  				  <img src="media/cloning.png" />
+          </section>
+  				<section>
+            <h3>Branching approach: Personal branch</h3>
+            <img src="media/workflow_personal.png" />
+          </section>
+          <section>
+            <h3>Branching approach: Fire and forget</h3>
+            <img src="media/workflow_fireforget.png" />
+          </section>
+  				<section>
+            <h3>Why pretested integration</h3>
+  				  <img src="media/pi_vs_pc.png" />
+          </section>
+				</section>
+			<section>
 					<h2>Designing the plugin: The long and winding road</h2>
 			</section>
 			<section>
@@ -137,7 +154,8 @@
 					<h2>Plugin design</h2>
           <ul>
             <li>Defines extension points for extendability</li>
-            <li>Mercurial support</li>
+            <li>Integrate one commit at a time</li>
+            <li>Built-in Mercurial support</li>
             <li>Invariant: All commits on the integration branch is
 						verified</li>
           </ul>
@@ -146,6 +164,9 @@
           <h3>Pretested integration classes</h3>
           <img src="media/design.png" />
 				</section>
+        <section>
+          <img src="media/buildphases.png" />
+        </section>
 				<section>
           <img src="media/pip_flowchart.png" />
 				</section>
@@ -167,17 +188,16 @@
 				<section>
 					<h2>Mercurial</h2>
 					<ul>
-            <li>Branchy apprach: Personal branch</li>
-            <li>Atomic jobs</li>
+            <li>Personal branch workflow</li>
+            <li>Named branches</li>
+            <li>Push at commit</li>
+            <li>Reset to latest successful build</li>
 					</ul>
 				</section>
 				<section>
+          <h3>Personal branch</h3>
 				  <img src="media/branchy.png" />
         </section>
-				<section>
-					<h3>&lt;Insert picture of stuff being pulled and
-					pushed&gt;</h3>
-				</section>
 			</section>
       <section>
 				<section>
@@ -193,50 +213,18 @@
                 <li>rollback</li>
               </ul>
             </li>
-            <li>Give it back</li>
+            <li>Give it back... ;)</li>
 					</ol>
 				</section>
-				<section>
-					<h2>nextCommit</h2>
-					<ul>
-						<li>Reset to latest successful integration</li>
-						<li>Return next commit to be verified</li>
-					</ul>
-				</section>
-				<section>
-					<h2>prepareWorkspace</h2>
-					<ul>
-						<li>Retrieve latest changes</li>
-						<li>Merge next commit with integration branch</li>
-						<li>Make any other necessary preparations before build phase</li>
-					</ul>
-				</section>
-				<section>
-					<h2>commit</h2>
-					<ul>
-						<li>Changes are in the integration branch</li>
-						<li>Push changes to repository</li>
-					</ul>
-				</section>
-				<section>
-					<h2>rollback</h2>
-					<ul>
-						<li>Leave the repository workspace as before prepareWorkspace</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Extras</h2>
-					<ul>
-					</ul>
-				</section>
 			</section>
-				<section>
+			<section>
 					<h2>The future</h2>
-				</section>
-				<section>
-					<h2>Todo</h2>
+			</section>
+			<section>
+        <section>
+					<h2>Todo:</h2>
 					<ul>
+            <li>Built-in Git support</li>
 						<li>Environment variables</li>
 						<li>Configurable reset</li>
 						<li>Simplifying interface implementation</li>
@@ -244,9 +232,25 @@
 						<li>Configurable build success criteria</li>
 					</ul>
 				</section>
+<!--        <section>
+          <h3>Environment variables</h3>
+        </section>
+        <section>
+          <h3>Configurable reset</h3>
+        </section>
+        <section>
+          <h3>Simplifying interface implementation</h3>
+        </section>
+        <section>
+          <h3>Conditional integration</h3>
+        </section>
+        <section>
+          <h3>Configurable build success criteria</h3>
+        </section>-->
+      </section>
 				<section>
 					<section>
-						<h2>Better "branchy approach"</h2>
+						<h2>Improving the Mercurial plugin</h2>
 						<ul>
 							<li>Change mercurial plugin to:
 								<ul>
@@ -255,10 +259,17 @@
 									<li>Pull all branches</li>
 								</ul>
 							</li>
+					</ul>
+					</section>
+          <section>
+            <h3>Benefits of the fire and forget approach</h3>
+            <ul>
 							<li>Less configuration/cluttering of management</li>
 							<li>Deterministic playback</li>
-						</ul>
-					</section>
+              <li>Improve the invariant</li>
+	            <li>Better overview of integration</li>
+            </ul>
+          </section>
 					<section>
 						<h3>&lt;Insert picture of Mercurial frontend with proposed
 						changes&gt;</h3>
